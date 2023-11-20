@@ -82,6 +82,9 @@
 .logo {
   width: 50%;
 }
+.hLine {
+  display: none;
+}
 .mode {
   width: 50%;
   display: flex;
@@ -153,7 +156,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
 }
 
@@ -242,33 +245,85 @@ input:checked + .slider:before {
 }
 
 .tile-bottom {
-    display: flex;
+  display: flex;
 }
 
 .tile-bottom-h1 {
-    width: 50%;
-    justify-content: start;
+  width: 50%;
+  justify-content: start;
 }
 
 .tile-bottom-h1 h1 {
-color: var(--Very-Dark-Blue);
+  color: var(--Very-Dark-Blue);
 }
 
 .tile-bottom-rate {
-    width: 50%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .tile-bottom-rate img {
-    height: 20%;
+  height: 20%;
 }
 
 .tile-bottom-rate p {
-    font-size: 1rem;
-    color: var(--Lime-Green);
-    font-weight: 700;
+  font-size: 1rem;
+  color: var(--Lime-Green);
+  font-weight: 700;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
 
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .logo {
+    width: 100%;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  .logo p {
+    font-size: 0.8rem;
+  }
+  .hLine {
+    display: inline;
+  }
+  .mode {
+    width: 100%;
+  }
+  .mode-text {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .toggle-mode {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+  }
+
+  /* social platform followers and subscribers */
+  .social-followers {
+    flex-direction: column;
+  }
+
+  .social-tile {
+    width: 100%;
+  }
+
+  /* overview today */
+  .tiles {
+    flex-direction: column;
+  }
+  .overview-tile {
+    width: 100%;
+  }
+}
