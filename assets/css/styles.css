@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@500;700&family=Inter:wght@400;700&family=League+Spartan:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /* colors */
+  /* Primary */
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --YouTube: hsl(348, 97%, 39%);
+
+  /* Dark Theme */
+
+  --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+
+  /* Light Theme */
+
+  --Toggle: hsl(230, 22%, 74%);
+
+  /* Neutral */
+
+  /* Dark Theme */
+  /* bg */
+  --Very-Dark-Blue: hsl(230, 17%, 14%);
+  /* Top BG Pattern */
+  --Very-Dark-Blue: hsl(232, 19%, 15%);
+  /* Card BG */
+  --Dark-Desaturated-Blue: hsl(228, 28%, 20%);
+  /* Text */
+  --Desaturated-Blue: hsl(228, 34%, 66%);
+  /* Text */
+  --White: hsl(0, 0%, 100%);
+
+  /* Light Theme */
+
+  --White: hsl(0, 0%, 100%);
+  /* Top BG Pattern */
+  --Very-Pale-Blue: hsl(225, 100%, 98%);
+  /* Card BG */
+  --Light-Grayish-Blue: hsl(227, 47%, 96%);
+  /* Text */
+  --ark-Grayish-Blue: hsl(228, 12%, 44%);
+  /* Text */
+  --Very-Dark-Blue: hsl(230, 17%, 14%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+/* - Font size (Overview Card Headings): 14px */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400, 700;
+}
+
+/* main container */
+.container {
+  height: 100vh;
+}
+/* main page content */
+.content {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  margin-top: 5%;
+  display: flex;
+  /* justify-content: end; */
+}
+
+.logo {
+  width: 50%;
+}
+.mode {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+}
+
+/* toggle to change theme */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  -webkit-trnastion: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:focus + .slider {
+  background-color: var(--Lime-Green);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px -var(--Lime-Green);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* rounded sliders */
+.slider,
+.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* social platfom followers and subscribers */
+.social-followers {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+.social-tile {
+  width: 25%;
+  background-color: var(--Very-Pale-Blue);
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-color {
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--Facebook);
+  border-radius: 2%;
+}
+
+.social-icon {
+  display: flex;
+  gap: 0.5rem;
+}
+.followers h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--Very-Dark-Blue);
+}
+
+.followers p {
+  text-transform: uppercase;
+  color: var(--Very-Dark-Blue);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.day {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 2rem;
+}
+.day p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--Lime-Green);
+}
+.day img {
+  align-items: center;
+}
+
+/* overview Today */
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.tiles {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.overview-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 25%;
+  background-color: var(--Very-Pale-Blue);
+  padding: 1.5rem;
+}
+
+.tile-top {
+  display: flex;
+}
+.tile-h1 {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+}
+.tile-icon {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.tile-bottom {
+    display: flex;
+}
+
+.tile-bottom-h1 {
+    width: 50%;
+    justify-content: start;
+}
+
+.tile-bottom-h1 h1 {
+color: var(--Very-Dark-Blue);
+}
+
+.tile-bottom-rate {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.tile-bottom-rate img {
+    height: 20%;
+}
+
+.tile-bottom-rate p {
+    font-size: 1rem;
+    color: var(--Lime-Green);
+    font-weight: 700;
+}
+
+
